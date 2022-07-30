@@ -192,6 +192,17 @@ nav .nav-menu > li .dropdown-menu .right-section .dropdown-links li a:hover p {
 	color: #000;
 }
 
+.img-section-container{
+    width: 100%;
+    background-color: cadetblue;
+    padding-left: 50px;
+    padding-right: 10px;
+}
+.img-section-container image{
+    width: 100%;
+    height: 100%;
+}
+
 
 
 
