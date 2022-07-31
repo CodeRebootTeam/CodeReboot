@@ -31,7 +31,8 @@
     <link rel="icon" type="image/x-icon" href="Assets/Images/favicons/favicon-32x32.png">
 	<title>CodeReboot | Home</title>
 </head>
-<body><nav>
+<body onload="typeWriter()">
+    <nav>
     <div class="container">
         <a href="#" class="brand"><i class='bx bx-power-off'></i> CodeReboot </a>
         <ul class="nav-menu">
@@ -39,7 +40,7 @@
                 <a href="./index.html" class="active">Home</a>
             </li>
             <li>
-                <a href="./Assets/Pages/courses.html">Courses <i class='bx bx-chevron-down' ></i></a>
+                <a href="#">Courses <i class='bx bx-chevron-down' ></i></a>
                 <div class="dropdown-menu">
                     <div class="container">
                         <div class="left-section">
@@ -121,11 +122,18 @@
     </div>
 </nav>
 
-<section class="hero-section">
-    <h1>Welcome to CodeReboot. A place where you can learn coding and land your dream job</h1>
-    <a href="#" class="hero-btn">Start Learning</a>
-    <img src="./Assets/Images/undraw_programming_re_kg9v.svg" alt="">
-</section>
+<div class="hero-div">
+    <section class="hero row herocontainer">
+    <div>
+        <h1>Learn Coding Right Away!</h1>
+        <p>Start Learning With CodeReboot And Land Your Dream Job</p>
+        <a href="#" class="hero-btn">Start Learning</a>
+    </div>
+    <div class="row">
+        <img src="./Assets/Images/undraw_pair_programming_re_or4x.svg" alt="">
+    </div>
+    </section>
+</div>
 	
 	<script src="./Assets/Js/script.js"></script>
 </body>

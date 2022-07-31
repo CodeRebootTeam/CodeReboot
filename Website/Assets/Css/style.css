@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
 
 
 :root {
 	--open-sans: 'Open Sans', sans-serif;
 	--oswald: 'Oswald', sans-serif;
+	--poppins: 'Poppins', sans-serif;
 
 	--blue: #0097FC;
 	--light-blue: #7AC1FE;
@@ -14,7 +16,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: var(--open-sans);
+	font-family: var(--poppins);
 }
 body {
 	background: #2a314b;
@@ -48,6 +50,7 @@ nav .toggle-navbar {
 	z-index: 200;
 	transition: all .3s ease;
 	display: none;
+	color: white;
 }
 nav > .container {
 	display: flex;
@@ -55,9 +58,10 @@ nav > .container {
 }
 nav .brand {
 	margin-right: auto;
-	font-size: 24px;
+	font-size: 20px;
+	letter-spacing: 2px;
 	font-weight: 700;
-	font-family: var(--oswald);
+	font-family: var(--poppins);
 	color: #fff;
 	text-transform: uppercase;
 }
@@ -80,7 +84,7 @@ nav .nav-menu .active{
     font-weight: 600;
 }
 nav .nav-menu > li:hover > a {
-	color: var(--blue);
+	color: var(--light-blue);
 }
 nav .nav-menu > li > a .bx {
 	transition: all .3s ease;
@@ -128,7 +132,7 @@ nav .nav-menu > li .dropdown-menu .left-section p {
 }
 nav .nav-menu > li .dropdown-menu .left-section .btn-see-all {
 	padding: 12px 28px;
-	background: var(--blue);
+	background: var(--light-blue);
 	border-radius: 8px;
 	color: #fff;
 	transition: all .3s ease;
@@ -192,51 +196,60 @@ nav .nav-menu > li .dropdown-menu .right-section .dropdown-links li a:hover h5 {
 nav .nav-menu > li .dropdown-menu .right-section .dropdown-links li a:hover p {
 	color: #000;
 }
-.hero-section{
-	display: flex;
-	
-	position: absolute;
-	z-index: -9999;
-	right: 0;
-	bottom: 0;
+.hero-div{
+	background: linear-gradient(180deg, #24324f 0%, rgb(114, 44, 219) 164.26%);
 }
-.hero-section h1{
-	justify-content: left;
-	align-items: left;
-	align-self: left;
-	padding-left:  20px;
-	padding-top: 10%;
-	color: rgb(212, 212, 212);
-}
-.hero-section image{
-}
-
-.hero-section .hero-btn{
-	position: absolute;
-	top: 40%;
-	left: 10%;
-	display: inline-block;
-	outline: 0;
-	border: none;
-	cursor: pointer;
-	padding: 10px 10px;
-	border-radius: 50px;
-	margin: 2px;
-	height: 50px;
-	font-size: 18px;
-	background-color: var(--blue);
-	color: #fff;
-	justify-content: center;
+.hero{
+	gap: 2em;
+	flex-wrap: wrap-reverse;
 	align-items: center;
+	min-height: calc(100vh - 93.6px);
+}
+.hero>*{
+	flex: 1 1 25em;
+}
+.hero h1{
+	color: #f9ecec;
+	font-weight: 500;
+	font-size: clamp(20px, 3vw, 50px);
+	line-height: 1;
+	font-family: (--poppins);
+}
+.hero p{
+	color: #f9ecec;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 1em 0;
+	font-family: (--poppins);
+}
+.hero a{
+	font-weight: 100;
+	font-size: 20px;
+	padding: 0.3em 1em;
+	background: linear-gradient(180deg, #6292f3 0%, rgba(63,0,156,0.90) 164.26%);
+	border-radius: 50px;
+	color: white;
 
 }
-.hero-section .hero-btn:hover{
-background-color: var(--dark-blue);
+.hero a:hover{
+	background: linear-gradient(90deg,#6292f3 0%, rgba(63,0,156,0.90) 164.26%) ;
+
+}
+.hero img{
+	max-width: 100%;
+	object-fit: cover;
+}
+.row{
+	display: flex;
+}
+.herocontainer{
+	max-width: 90%;
+	margin: 0 auto;
 }
 
 
-
-
+/* MEDIA QUERIES */
+ 
 @media screen and (max-width: 576px) {
 	nav .nav-menu {
 		position: fixed;
@@ -244,7 +257,7 @@ background-color: var(--dark-blue);
 		left: 100%;
 		width: 100%;
 		height: 100%;
-		background: #fff;
+		background: #2a314b;
 		z-index: 100;
 		flex-direction: column;
 		align-items: flex-start;
