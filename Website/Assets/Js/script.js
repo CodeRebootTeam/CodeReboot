@@ -29,3 +29,4 @@ toggleNavbar.addEventListener('click', function () {
 		}
 	}
 })
+
