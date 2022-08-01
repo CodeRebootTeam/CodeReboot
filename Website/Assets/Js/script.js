@@ -1,7 +1,7 @@
-const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdownMenu = document.querySelector('.dropdown-menux');
 const toggleNavbar = document.querySelector('.toggle-navbar');
-const dropdownClose = document.querySelector('.dropdown-close');
-const navMenu = document.querySelector('.nav-menu');
+const dropdownClose = document.querySelector('.dropdown-closex');
+const navMenu = document.querySelector('.nav-menux');
 
 dropdownMenu.previousElementSibling.addEventListener('click', function () {
 	if(window.innerWidth < 576) {
@@ -30,3 +30,28 @@ toggleNavbar.addEventListener('click', function () {
 	}
 })
 
+
+
+$(document).ready(function() {
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:10,
+		responsiveClass: true,
+		center:true,
+		nav: true,
+		autoplay:true,
+		autoplayTimeout:3000,
+		autoplayHoverPause:true,
+		responsive:{
+			0:{
+				items:1,
+			},
+			600:{
+				items:3,
+			},
+			1000:{
+				items:4,
+			}
+		}
+	})
+})
